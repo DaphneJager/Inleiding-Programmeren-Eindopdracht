@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: auto;
+}
+
+/* body achtergrond*/
+body {
+    background-image: url(../images/achtergrond.bergen.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: brown;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/*text opmaak*/
+h1, p {
+    text-align: center;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/*foto opmaak*/
+#bruineBeer {
+    width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bloemetje {
+    padding: 100px;
+}
+
+.controls div {
+    display: flex;
+    padding-right: 20%;
+    position: relative;
+}   
+
+.controls div img {
+    width: 250px;
+}
+
+.controls {
+    width: 10%;
+    padding-right: 30%;
+}
+
+
+.beer {
+    width: 350px;
+    padding-left: 50px;
+    padding-top: 20px;
+    position: relative;
+}
