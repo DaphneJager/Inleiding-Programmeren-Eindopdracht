@@ -15,6 +15,14 @@ body {
     padding: 20px;
 }
 
+.achtergrond2 {
+    background-image: url(../images/achtergrond.bamboe.png);
+}
+
+.achtergrond3 {
+    background-image: url(../images/achtergrond.ijs.png);
+}
+
 main {
     display: flex;
     justify-content: space-evenly;
@@ -46,6 +54,8 @@ header {
 
 #bloemetje {
     padding: 100px;
+    height: 133px;
+    width: 111px;
 }
 
 .controls div {
