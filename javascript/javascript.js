@@ -90,7 +90,6 @@ function beerGromt(){
 }
 
 
-
 //bloemetje groeit na 5 seconden lightbulb opdracht
 function showBloemetje() {
     bloemetje.src = "./images/bloembak.png"
