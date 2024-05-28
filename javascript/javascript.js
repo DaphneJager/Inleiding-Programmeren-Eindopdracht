@@ -9,9 +9,10 @@ const pijlAchtergrondRechts = document.querySelector('#pijlRechtsAchtergrond');
 const pijlAchtergrondLinks = document.querySelector('#pijlLinksAchtergrond');
 const body = document.querySelector("body");
 const achtergrondVeranderen = document.querySelector("#achtergrondveranderen");
+const kleineBeerVeranderen = document.querySelector('#beertjeveranderen');
 
 //LET
-let namen = ['Beernard', 'Beerend', 'Brom', 'Ijs', 'Beerta', 'Beert', 'Beernie', 'Beertie'];
+let namen = ['Beernard', 'Beerend', 'Brom', 'Ijs', 'Beerta', 'Beert', 'Beernie', 'Beertie', 'Knuffel', 'Gummy'];
 let naamveranderen = document.querySelector("#dobbelsteen");
 let randomnaam = Math.random();
 let audio = new Audio("./audio/beerRoar.mp3");
@@ -42,14 +43,16 @@ function beerkeuzeEraf() {
 function beerUpdate() {
     if(beerkeuze == 0) {
         document.getElementById("bruineBeer").src = "./images/bruinebeer.png"
+        kleineBeerVeranderen.src = "./images/beertjeveranderen.bruin.png"
     }
     else if (beerkeuze == 1) {
         document.getElementById("bruineBeer").src = "./images/ijsbeer.png"
+        kleineBeerVeranderen.src = "./images/beertjeveranderen.ijs.png"
     }
     else if (beerkeuze == -1) {
         document.getElementById("bruineBeer").src = "./images/pandabeer.png"
+        kleineBeerVeranderen.src = "./images/beertjeveranderen.panda.png"
     }
-
 }
 
 function achtergrondErbij() {
@@ -91,7 +94,7 @@ function beerGromt(){
 
 
 //bloemetje groeit na 5 seconden lightbulb opdracht
-function showBloemetje() {
+function geenBloemetje() {
     bloemetje.src = "./images/bloembak.png"
     setTimeout(groeiBloemetje, 5000)
 }
@@ -100,11 +103,11 @@ function groeiBloemetje() {
     bloemetje.src = "./images/bloemetje.png"
 }
 
-showBloemetje()
+geenBloemetje()
 
 //Random naam als je op dobbelsteen klikt dobbelsteen opdracht
 function randomNaam() {
-    document.getElementById('nameInput').value = namen[Math.ceil(Math.random() * 5)]
+    document.getElementById('nameInput').value = namen[Math.ceil(Math.random() * 9)]
 }
 
 //EVENTLISTENER
