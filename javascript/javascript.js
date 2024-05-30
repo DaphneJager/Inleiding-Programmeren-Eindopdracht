@@ -22,6 +22,7 @@ let randomnaam = Math.random();
 let beerkeuze = 0
 let achtergrondKeuze = 0
 let kleidingKeuze = 0
+
 // audio eigen onderzoek via: https://www.w3schools.com/jsref/met_audio_play.asp
 let audio = new Audio("./audio/beerRoar.mp3");
 
@@ -60,6 +61,7 @@ function beerUpdate() {
     }
 }
 
+//achtergrond veranderen
 function achtergrondErbij() {
     achtergrondKeuze += 1
     if(achtergrondKeuze >= 1){
@@ -126,7 +128,7 @@ function beerGromt(){
 }
 
 
-//bloemetje groeit na 5 seconden lightbulb opdracht
+//bloemetje groeit na 5 seconden lightbulb opdracht DLO
 function geenBloemetje() {
     bloemetje.src = "./images/bloembak.png"
     setTimeout(groeiBloemetje, 5000)
@@ -138,7 +140,7 @@ function groeiBloemetje() {
 
 geenBloemetje()
 
-//Random naam als je op dobbelsteen klikt dobbelsteen opdracht
+//Random naam als je op dobbelsteen klikt dobbelsteen opdracht DLO
 function randomNaam() {
     document.getElementById('nameInput').value = namen[Math.ceil(Math.random() * 9)]
 }
