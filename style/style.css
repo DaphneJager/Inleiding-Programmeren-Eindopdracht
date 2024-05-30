@@ -15,6 +15,7 @@ body {
     padding: 20px;
 }
 
+/* achtergrond veranderen classes classlist*/
 .achtergrond2 {
     background-image: url(../images/achtergrond.bamboe.png);
 }
@@ -23,6 +24,7 @@ body {
     background-image: url(../images/achtergrond.ijs.png);
 }
 
+/* main opmaak */
 main {
     display: flex;
     justify-content: space-evenly;

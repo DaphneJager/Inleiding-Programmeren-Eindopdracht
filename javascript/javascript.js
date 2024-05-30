@@ -15,10 +15,11 @@ const kleineBeerVeranderen = document.querySelector('#beertjeveranderen');
 let namen = ['Beernard', 'Beerend', 'Brom', 'Ijs', 'Beerta', 'Beert', 'Beernie', 'Beertie', 'Knuffel', 'Gummy'];
 let naamveranderen = document.querySelector("#dobbelsteen");
 let randomnaam = Math.random();
-let audio = new Audio("./audio/beerRoar.mp3");
 let beerkeuze = 0
 let achtergrondKeuze = 0
 let kleidingKeuze = 0
+// audio eigen onderzoek via: https://www.w3schools.com/jsref/met_audio_play.asp
+let audio = new Audio("./audio/beerRoar.mp3");
 
 
 //FUNCTION
@@ -87,7 +88,7 @@ function achtergrondUpdate() {
 
 
 
-//beer geluid eigen onderzoek
+//beer geluid eigen onderzoek via: https://www.w3schools.com/jsref/met_audio_play.asp
 function beerGromt(){
     audio.play();
 }
