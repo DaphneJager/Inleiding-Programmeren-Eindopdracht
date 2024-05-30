@@ -7,9 +7,13 @@ const pijlBeerRechts = document.querySelector("#pijlRechtsBeertje");
 const pijlBeerLinks = document.querySelector("#pijlLinksBeertje");
 const pijlAchtergrondRechts = document.querySelector('#pijlRechtsAchtergrond');
 const pijlAchtergrondLinks = document.querySelector('#pijlLinksAchtergrond');
+const pijlLinksKleding = document.querySelector('#pijlLinksKleding')
+const pijlRechtsKleding = document.querySelector('#pijlRechtsKleding')
 const body = document.querySelector("body");
 const achtergrondVeranderen = document.querySelector("#achtergrondveranderen");
 const kleineBeerVeranderen = document.querySelector('#beertjeveranderen');
+const bril = document.querySelector("#bril");
+const shirt = document.querySelector("#shirt");
 
 //LET
 let namen = ['Beernard', 'Beerend', 'Brom', 'Ijs', 'Beerta', 'Beert', 'Beernie', 'Beertie', 'Knuffel', 'Gummy'];
@@ -86,7 +90,35 @@ function achtergrondUpdate() {
     }
 }
 
+//kleding veranderen
+function kleidngKeuzeErbij() {
+    kleidingKeuze += 1
+    if(kleidingKeuze >= 1){
+        kleidingKeuze = 1
+    }
+    kledingUpdate();
+}
 
+function kledingKeuzeEraf() {
+    kleidingKeuze -= 1
+    if(kleidingKeuze <= -1){
+        kleidingKeuze = -1
+    }
+    kledingUpdate();
+}
+
+function kledingUpdate() {
+    if(kleidingKeuze == 0) {
+        bril.style.display = "none"
+        shirt.style.display = "none"
+    } else if( kleidingKeuze == 1){
+        bril.style.display = "none"
+        shirt.style.display = "block"
+    } else if(kleidingKeuze == -1){
+        bril.style.display = "block"
+        shirt.style.display = "none"
+    }
+}
 
 //beer geluid eigen onderzoek via: https://www.w3schools.com/jsref/met_audio_play.asp
 function beerGromt(){
@@ -118,6 +150,8 @@ pijlBeerLinks.addEventListener("click", beerkeuzeEraf)
 naamveranderen.addEventListener('click', randomNaam)
 pijlAchtergrondRechts.addEventListener('click', achtergrondErbij)
 pijlAchtergrondLinks.addEventListener('click', achtergrondEraf)
+pijlLinksKleding.addEventListener('click', kledingKeuzeEraf)
+pijlRechtsKleding.addEventListener('click', kleidngKeuzeErbij)
 
 //CONSOLE LOG
 

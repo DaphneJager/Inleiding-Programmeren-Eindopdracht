@@ -81,3 +81,23 @@ header {
     padding-top: 20px;
     position: relative;
 }
+
+.shirt {
+    position: absolute;
+}
+
+.bril {
+    position: absolute;
+}
+
+#shirt {
+    padding-top: 190px;
+    padding-right: 50px;
+    display: none;
+}
+
+#bril {
+    padding-top: 45px;
+    padding-right: 50px;
+    display: none;
+}
